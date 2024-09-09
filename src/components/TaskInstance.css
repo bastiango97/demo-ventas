@@ -1,0 +1,63 @@
+.task-instance {
+    padding: 1rem; /* Padding inside the instance */
+    margin: 0; /* Ensure there is no margin, especially on the left */
+    background-color: #ffffff; /* Background color for the task */
+    border: 1px solid #dee2e6; /* Border around the task instance */
+    border-radius: 0; /* Make sure corners are sharp */
+    box-shadow: none; /* Remove any shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #495057; /* Text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    font-size: 0.95rem; /* Font size */
+    width: 100%; /* Make sure the instance takes up the full width of the sidebar */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.task-instance:hover {
+    background-color: #f8f9fa; /* Lighten the background on hover */
+}
+
+.task-instance.selected {
+    background-color: #e2e6ea; /* Background color when selected */
+    border-color: #007bff; /* Highlight the border when selected */
+}
+
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.priority {
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.priority.baja {
+    background-color: #ffc107; /* Yellow for low priority */
+    color: #212529;
+}
+
+.priority.media {
+    background-color: #17a2b8; /* Blue for medium priority */
+    color: white;
+}
+
+.priority.alta {
+    background-color: #dc3545; /* Red for high priority */
+    color: white;
+}
+
+.task-details p {
+    margin: 0.2rem 0;
+    line-height: 1.4;
+}
+
+.task-details strong {
+    font-weight: bold;
+    color: #343a40;
+}

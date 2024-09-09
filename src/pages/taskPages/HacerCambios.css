@@ -1,0 +1,143 @@
+/* HacerCambios Page Styles */
+.hacer-cambios-container {
+    background-color: #ffffff; /* White background */
+    padding: 40px; /* Consistent padding */
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for a professional feel */
+    width: 85%; /* Occupy 85% of the main content area */
+    margin: 40px auto; /* Center and add margin on top and bottom */
+    position: relative;
+    min-height: 400px; /* Adjusted height */
+    font-family: 'Arial', sans-serif; /* Corporate-like font */
+}
+
+.hacer-cambios-container h2 {
+    color: #333333; /* Dark gray */
+    margin-bottom: 20px;
+    font-size: 2rem; /* Larger heading for emphasis */
+}
+
+.hacer-cambios-container p {
+    margin-bottom: 15px; /* Spacing between paragraphs */
+    color: #555555; /* Slightly lighter gray */
+    font-size: 1.1rem;
+    line-height: 1.6; /* Improved readability */
+}
+
+.hacer-cambios-container .coverage-options {
+    margin-top: 30px;
+}
+
+.hacer-cambios-container .coverage-options label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+.hacer-cambios-container .coverage-options input {
+    margin-right: 10px;
+}
+
+.hacer-cambios-container .action-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hacer-cambios-container .action-buttons button {
+    background-color: #4B0082; /* Corporate purple background */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.hacer-cambios-container .action-buttons button:hover {
+    opacity: 0.9; /* Slight transparency on hover */
+}
+
+/* Modal Overlay */
+.custom-modal-overlay-alt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it sits on top */
+}
+
+/* Modal Container */
+.custom-modal-alt {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Loading Spinner */
+.loading-spinner-alt {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin-alt 2s linear infinite;
+}
+
+@keyframes spin-alt {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Close Button */
+.modal-close-button-alt {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-close-button-alt:hover {
+    background-color: #2980b9;
+}
+
+/* Success Message */
+.success-message-alt {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.success-message-alt p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.success-message-alt .modal-close-button-alt {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #4B0082; /* Corporate purple background */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.success-message-alt .modal-close-button-alt:hover {
+    background-color: #3a006d; /* Darker purple on hover */
+}

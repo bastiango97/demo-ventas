@@ -1,0 +1,46 @@
+.sidebar-stats {
+    width: 270px; /* Adjusted width to fit the content */
+    background-color: #f8f9fa; /* Light gray background */
+    color: #212529; /* Dark gray text for the "Estadísticas" title */
+    height: 100vh; /* Full height of the viewport */
+    border-right: 1px solid #dee2e6; /* Subtle border to separate from content */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Container for the Estadísticas title */
+.sidebar-stats-header-container {
+    padding: 15px;
+    background-color: #f8f9fa; /* Ensure background color matches the sidebar */
+    border-bottom: 1px solid #dee2e6; /* Border for separation */
+    box-sizing: border-box;
+}
+
+/* The container for the list of graphs */
+.sidebar-stats-content {
+    overflow-y: auto; /* Enable vertical scrolling */
+    flex-grow: 1; /* Ensure this section takes up remaining space */
+}
+
+/* Sidebar sections */
+.sidebar-stats-section {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.sidebar-stats-header {
+    font-size: 1rem; /* Increase font size for graph titles */
+    padding: 0.75rem; /* Increase padding for more comfortable reading */
+    background-color: #343a40; /* Dark gray background for headers */
+    color: #ffffff; /* White text */
+    border: 1px solid #495057; /* Slightly darker border to create contrast */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-stats-header.stats-active, .sidebar-stats-header:hover {
+    background-color: #495057; /* Slightly lighter on hover and when active */
+    transform: scale(1.02); /* Slightly increase size on hover and active */
+}

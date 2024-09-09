@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4B0082; /* Primary color (Purple) */
+    padding: 0.5rem 2rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    background-color: white; /* White background */
+    padding: 5px 15px; /* Add some padding around the logo */
+    border-radius: 8px; /* Rounded corners */
+    margin-left: -1rem; /* Shift the rectangle slightly to the left */
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: #4B0082; /* Inverse color on hover */
+    border-color: #4B0082;
+}

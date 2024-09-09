@@ -1,0 +1,108 @@
+/* EnviarCotizacion Page Styles */
+.enviar-cotizacion-container {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 40px; /* Keep the padding as it is */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Larger shadow for emphasis */
+    width: 90%; /* Occupy 90% of the main content area */
+    margin: 0 auto;
+    position: relative; /* To position the button inside the container */
+    min-height: 600px; /* Increased height to accommodate more content */
+}
+
+.enviar-cotizacion-container h2 {
+    color: #4B0082; /* Dark purple */
+    margin-bottom: 25px;
+    font-size: 1.75rem; /* Increase heading size */
+}
+
+.enviar-cotizacion-container p {
+    margin-bottom: 20px; /* Spacing between paragraphs */
+    color: #333;
+}
+
+.complete-task-button {
+    background-color: #4B0082; /* Purple background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px; /* Keep the button at the bottom */
+    right: 20px; /* Align the button to the right */
+    font-size: 1rem;
+}
+
+.complete-task-button:hover {
+    background-color: #3a006d; /* Darker purple on hover */
+}
+
+/* Modal Overlay */
+.custom-modal-overlay-alt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it sits on top */
+}
+
+/* Modal Container */
+.custom-modal-alt {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Loading Spinner */
+.loading-spinner-alt {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin-alt 2s linear infinite;
+}
+
+@keyframes spin-alt {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Close Button */
+.modal-close-button-alt {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-close-button-alt:hover {
+    background-color: #2980b9;
+}
+
+/* Success Message */
+.success-message-alt {
+    text-align: center;
+}
+
+.success-message-alt p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.success-message-alt .modal-close-button-alt {
+    margin: 0 auto;
+    display: block;
+}
