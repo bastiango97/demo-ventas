@@ -1,83 +1,93 @@
-/* Modal and Loading Styles */
-
-/* Modal Overlay */
+.modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 500px;
+    max-height: 90vh;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #c1c1c1 #fff; /* Firefox */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000; /* Ensure it sits on top */
 }
 
-/* Modal Container */
-.modal {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-/* Close Button */
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Modal Title */
-.modal-title {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: #333;
-    text-align: center;
+/* Section Headings */
+.modal-section-title {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
 }
 
 /* Form Group */
 .modal-form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding: 0 10px; /* Added padding to ensure the fields don't touch the section border */
 }
 
 .modal-form-group label {
     display: block;
-    margin-bottom: 5px;
-    font-size: 1rem;
-    color: #555;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #666;
 }
 
 .modal-form-group input,
 .modal-form-group select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensures padding is included in the element's width and height */
+}
+
+.modal-form-group input:focus,
+.modal-form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Section Container */
+.modal-section {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Ensures content stays within the bounds */
 }
 
 /* Modal Actions */
 .modal-actions {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 /* Buttons */
 .modal-button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .modal-button.confirm {
@@ -90,8 +100,12 @@
     color: white;
 }
 
-.modal-button:hover {
-    opacity: 0.9;
+.modal-button.confirm:hover {
+    background-color: #0056b3;
+}
+
+.modal-button.cancel:hover {
+    background-color: #c82333;
 }
 
 /* Loading Styles */
@@ -100,15 +114,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
-/* Loading Spinner */
-.spinner {
+.loading .spinner {
     border: 8px solid #f3f3f3;
     border-top: 8px solid #3498db;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     animation: spin 2s linear infinite;
 }
 
@@ -117,17 +131,31 @@
     100% { transform: rotate(360deg); }
 }
 
+.loading p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
 /* Success Message */
 .success-message {
     text-align: center;
+    padding: 20px;
 }
 
 .success-message p {
-    font-size: 1.2em;
+    font-size: 1.3rem;
     margin-bottom: 20px;
+    color: #28a745;
+    font-weight: 500;
 }
 
 .success-message .modal-button.confirm {
     margin: 0 auto;
     display: block;
+    background-color: #28a745;
+}
+
+.success-message .modal-button.confirm:hover {
+    background-color: #218838;
 }
